@@ -9,8 +9,9 @@ variable "location" {
 }
 
 variable "address_space" {
+  type = "list"
   description = "Default vnet address space."
-  default     = ""
+  default     = {}
 }
 
 variable "resource_group_name" {
@@ -19,11 +20,29 @@ variable "resource_group_name" {
 }
 
 variable "dns_servers" {
+  type = "list"
   description = "Default vnet dns servers."
-  default     = []
+  default     = {}
 }
 
 variable "tag_team" {
   description = "Default vnet tag team."
   default     = ""
+}
+
+variable "vnet_peerings" {
+  type = "map"
+  description = "Default vnet peerings."
+  default     = {}
+}
+
+variable "id" {
+  description = "Default vnet id."
+  default     = ""
+}
+
+variable "subnets" {
+  type = "list"
+  description = "Default vnet id."
+  default     = {}
 }
